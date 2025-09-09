@@ -1,0 +1,369 @@
+/* MovieShowtimes.css */
+.movie-showtimes {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.movie-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
+}
+
+.movie-title h1 {
+  margin: 0 0 10px 0;
+  font-size: 28px;
+  color: #222;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+}
+
+.rating-value {
+  font-weight: bold;
+  margin-right: 15px;
+  font-size: 16px;
+  color: #444;
+}
+
+.rate-button {
+  background-color: #333333;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.movie-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.view-details, .share {
+  background-color: transparent;
+  border: 1px solid #ddd;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.view-details:hover, .share:hover {
+  background-color: #f0f0f0;
+}
+
+.calendar-section {
+  margin-bottom: 20px;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.date-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  flex: 1;
+}
+
+.date-item:hover {
+  background-color: #f0f0f0;
+}
+
+.date-item.selected {
+  background-color: #333333;
+  color: white;
+}
+
+.day, .month {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.date {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.filters-section {
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.cinema-section {
+  background-color: white;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+}
+
+.cinema-name {
+  margin: 0 0 5px 0;
+  font-size: 18px;
+}
+
+.cinema-location {
+  margin: 0 0 15px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.showtimes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.showtime {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 120px;
+  text-align: center;
+}
+
+.showtime:hover {
+  border-color: #333333;
+}
+
+.showtime.selected {
+  background-color: #333333;
+  color: white;
+  border-color: #333333;
+}
+
+.time {
+  display: block;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.format {
+  display: block;
+  font-size: 12px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.showtime.selected .format {
+  color: #fff;
+}
+
+.selected-seats-info {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #e6f7ff;
+  border-radius: 8px;
+  border-left: 4px solid #1890ff;
+}
+
+.selected-seats-info h3 {
+  margin: 0;
+  color: #1890ff;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.seat-modal {
+  background-color: white;
+  border-radius: 12px;
+  padding: 24px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #222;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #999;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-button:hover {
+  color: #333;
+}
+
+.seat-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.seat-option {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background: none;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.seat-option:hover {
+  border-color: #333333;
+  background-color: #fff5f5;
+}
+
+.seat-option.selected {
+  background-color: #333333;
+  color: white;
+  border-color: #333333;
+}
+
+.price-info {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 25px;
+}
+
+.price-tier {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  min-width: 120px;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.tier {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.availability {
+  font-size: 12px;
+  color: #52c41a;
+}
+
+.select-seats-button {
+  width: 100%;
+  padding: 15px;
+  background-color: #333333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.select-seats-button:hover {
+  background-color: #333333;
+}
+
+@media (max-width: 768px) {
+  .movie-header {
+    flex-direction: column;
+  }
+  
+  .movie-actions {
+    margin-top: 15px;
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .calendar-header {
+    flex-wrap: wrap;
+  }
+  
+  .date-item {
+    flex-basis: calc(25% - 10px);
+    margin-bottom: 10px;
+  }
+  
+  .showtimes {
+    justify-content: center;
+  }
+  
+  .price-info {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .seat-options {
+    gap: 8px;
+  }
+  
+  .seat-option {
+    width: 45px;
+    height: 45px;
+    font-size: 16px;
+  }
+}
