@@ -8,6 +8,7 @@ const Payment = () => {
   const { 
     seatCount, 
     selectedSeats, 
+    seatsJson, // Receive the JSON object
     movie, 
     time, 
     date, 
@@ -24,6 +25,9 @@ const Payment = () => {
   
   const convenienceFee = 70;
   const orderTotal = totalAmount + convenienceFee;
+  
+  // Log the received seats JSON to console
+  console.log('Received seats JSON:', seatsJson);
   
   const handlePayment = () => {
     // Mark seats as booked in localStorage (permanent booking)
@@ -131,8 +135,6 @@ const Payment = () => {
               <span>Ticket Price</span>
               <span>₹{totalAmount?.toFixed(2) || '300.00'}</span>
             </div>
-            
- 
             
             <div className="fare-item">
               <span>Convenience Fees</span>

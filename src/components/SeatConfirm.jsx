@@ -137,6 +137,18 @@ const SeatConfirm = () => {
   // Handle payment process
   const handleProceedToPay = () => {
     if (selectedSeats.length === seatCount) {
+      // Create a JSON object with seat details
+      const seatsJson = selectedSeats.map(seatId => {
+        const row = seatId.charAt(0);
+        const number = parseInt(seatId.slice(1));
+        return {
+          id: seatId,
+          row: row,
+          number: number,
+          price: 150
+        };
+      });
+      
       // Save the selected seats to sessionStorage to maintain state if user navigates back
       sessionStorage.setItem('tempSelectedSeats', JSON.stringify(selectedSeats));
       
@@ -145,6 +157,7 @@ const SeatConfirm = () => {
         state: { 
           seatCount, 
           selectedSeats, 
+          seatsJson, // Send the JSON object
           movie, 
           time, 
           date, 
