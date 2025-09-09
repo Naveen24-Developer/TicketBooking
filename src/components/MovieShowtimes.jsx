@@ -48,10 +48,13 @@ const MovieShowtimes = () => {
     <div className="movie-showtimes">
       <div className="movie-header">
         <div className="movie-title">
-          <h1>Coolie</h1>
-          <div className="rating">
-            <span className="rating-value">7.6/10</span>
-            <button className="rate-button">Rate now</button>
+          <img className="movie-image" src="https://cdn.district.in/movies-assets/images/cinema/Coolie_2_Poster-33dfdd70-71f9-11f0-8de0-9d1c38983d05.jpg" alt="movie" />
+          <div className="title-rating-container">
+            <h1>Coolie</h1>
+            <div className="rating">
+              <span className="rating-value">7.6/10</span>
+              <button className="rate-button">Rate now</button>
+            </div>
           </div>
         </div>
         <div className="movie-actions">

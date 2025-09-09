@@ -160,7 +160,7 @@ const SeatConfirm = () => {
   useEffect(() => {
     return () => {
       // Only clear if we're not navigating to payment page
-      if (!window.location.pathname.includes('/payment')) {
+      if (!window.location.pathname.includes('/Payment')) {
         sessionStorage.removeItem('tempSelectedSeats');
       }
     };
@@ -183,16 +183,6 @@ const SeatConfirm = () => {
         </div>
       </header>
       
-      <div className="selection-info">
-        <p>You've selected <strong>{seatCount}</strong> seats. Click on any available seat to automatically select {seatCount} adjacent seats.</p>
-        {selectedSeats.length > 0 && selectedSeats.length < seatCount && (
-          <p className="warning">Warning: Could not find {seatCount} adjacent seats. Only {selectedSeats.length} seat(s) selected.</p>
-        )}
-      </div>
-      
-      <div className="seat-layout-container">
-        <div className="screen-indicator">SCREEN THIS WAY</div>
-        <div className="screen"></div>
         
         <div className="seat-layout">
           {rows.map((row, rowIndex) => (
@@ -219,7 +209,13 @@ const SeatConfirm = () => {
               <div className="row-label">{row}</div>
             </div>
           ))}
+        <div className="seat-layout-container">
+        <div className="screen-indicator">SCREEN THIS WAY</div>
+        <div className="screen">
         </div>
+        </div>
+        
+
         
         <div className="seat-legend">
           <div className="legend-item">

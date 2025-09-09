@@ -22,9 +22,8 @@ const Payment = () => {
   const [state] = useState('Tamilnadu');
   const [showConfirmation, setShowConfirmation] = useState(false);
   
-  const foodBeverage = 100;
   const convenienceFee = 70;
-  const orderTotal = totalAmount + foodBeverage + convenienceFee;
+  const orderTotal = totalAmount + convenienceFee;
   
   const handlePayment = () => {
     // Mark seats as booked in localStorage (permanent booking)
@@ -133,10 +132,7 @@ const Payment = () => {
               <span>₹{totalAmount?.toFixed(2) || '300.00'}</span>
             </div>
             
-            <div className="fare-item">
-              <span>Food & Beverage</span>
-              <span>₹{foodBeverage.toFixed(2)}</span>
-            </div>
+ 
             
             <div className="fare-item">
               <span>Convenience Fees</span>

@@ -1,11 +1,9 @@
 .payment-container {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
   font-family: 'Arial', sans-serif;
   color: #333;
   padding: 20px;
-  background-color: #f9f9f9;
-  min-height: 100vh;
   position: relative;
 }
 
@@ -78,8 +76,8 @@
 }
 
 .payment-option.selected {
-  border-color: #e50914;
-  background-color: #fff5f5;
+  border-color: #101010;
+  background-color: #f1f1f1;
 }
 
 .payment-option input {
@@ -89,8 +87,8 @@
 
 .checkmark {
   position: absolute;
-  top: 15px;
-  left: 15px;
+  top: 16px;
+  left: 16px;
   height: 16px;
   width: 16px;
   background-color: #eee;
@@ -99,7 +97,7 @@
 }
 
 .payment-option.selected .checkmark {
-  background-color: #e50914;
+  background-color: #101010;
 }
 
 .payment-option .payment-subtext {
@@ -134,13 +132,13 @@
 }
 
 .pay-button {
-  background-color: #e50914;
+  background-color: #333333;
   color: white;
   border: none;
 }
 
 .pay-button:hover {
-  background-color: #c00812;
+  background-color: #101010;
 }
 
 .fare-summary {
@@ -175,7 +173,7 @@
   font-weight: bold;
   border-bottom: none;
   font-size: 18px;
-  color: #e50914;
+  color: #333333;
 }
 
 .user-details {
@@ -212,7 +210,7 @@
   margin: 0;
   font-size: 24px;
   font-weight: bold;
-  color: #e50914;
+  color: #333333;
 }
 
 /* Confirmation Popup Styles */
@@ -277,7 +275,7 @@
 
 .back-home-button {
   padding: 12px 30px;
-  background-color: #e50914;
+  background-color: #333333;
   color: white;
   border: none;
   border-radius: 8px;
@@ -288,7 +286,7 @@
 }
 
 .back-home-button:hover {
-  background-color: #c00812;
+  background-color: #101010;
 }
 
 @media (max-width: 768px) {
